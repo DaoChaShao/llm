@@ -5,7 +5,6 @@
 
 ### Features
 
-- update CHANGELOG-GitHub.md ([06f99cb](https://github.com///commit/06f99cb0141e78bbcf4c0cd22b53b7bb34002ae5))
 - complete the 2nd function to get model name in parameters ([60affe0](https://github.com///commit/60affe032137953dfe8f62a620bbbfe67c365d00))
 - add model download page and sidebar parameters ([afd7146](https://github.com///commit/afd71465bcb2be33e9edf61d66a15098adcd5d9f))
 - complete the CHANGELOG-GitHub.md automatically ([5af3087](https://github.com///commit/5af30873260716ddde673ef019626e222284b68e))
@@ -21,6 +20,7 @@
 
 ### Chore
 
+- update CHANGELOG-GitHub.md ([9fae63c](https://github.com///commit/9fae63ca07ca564c9d84b7a4705e81aa25ba0878))
 - modify unimportant somthing ([ff25254](https://github.com///commit/ff252548957d972620e1ae7ea0793857ebee0674))
 
 ### Dependencies
