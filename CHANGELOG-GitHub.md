@@ -23,7 +23,7 @@
 
 ### Chore
 
-- update CHANGELOG-GitHub.md ([2e55854](https://github.com///commit/2e55854c003beff44123db01b642163e86892a93))
+- update CHANGELOG-GitHub.md ([b5e7ac4](https://github.com///commit/b5e7ac478532251b1399326cdc2019e6c24a2392))
 - modify unimportant somthing ([ff25254](https://github.com///commit/ff252548957d972620e1ae7ea0793857ebee0674))
 
 ### Dependencies
