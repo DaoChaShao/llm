@@ -8,13 +8,11 @@ def subpages_setter():
     subpage_icons: list = [":material/home:", ":material/download:"]
 
     subpages: dict = {
-        "Information": [
+        "Introduction": [
             Page(page=subpage_pages[0], title=subpage_titles[0], icon=subpage_icons[0]),
-
         ],
-        "Resources": [
+        "Actions": [
             Page(page=subpage_pages[1], title=subpage_titles[1], icon=subpage_icons[1]),
-
         ],
     }
     pages = navigation(subpages)
