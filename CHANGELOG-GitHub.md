@@ -5,6 +5,7 @@
 
 ### Features
 
+- complete the CHANGELOG-GitHub.md automatically ([1833719](https://github.com///commit/1833719990c22f283cb453f62907dde367ff8ecb))
 - complete the whole structure of the application ([0b2232c](https://github.com///commit/0b2232cc655f9028cf3773c4c78c8318ceb05f70))
 - complete the 1st function to set page navigation ([3c14ec6](https://github.com///commit/3c14ec60c4678ffcbd977ff82a518eed49a6675c))
 - complete the home page ([1a8b4eb](https://github.com///commit/1a8b4eb9de2d4f94bbf40e97df47532192e23c05))
