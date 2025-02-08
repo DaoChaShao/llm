@@ -1,0 +1,2 @@
+git-changelog==2.5.3
+modelscope==1.22.3
