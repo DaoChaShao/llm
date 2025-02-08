@@ -5,6 +5,7 @@
 
 ### Features
 
+- update CHANGELOG-GitHub.md ([06f99cb](https://github.com///commit/06f99cb0141e78bbcf4c0cd22b53b7bb34002ae5))
 - complete the 2nd function to get model name in parameters ([60affe0](https://github.com///commit/60affe032137953dfe8f62a620bbbfe67c365d00))
 - add model download page and sidebar parameters ([afd7146](https://github.com///commit/afd71465bcb2be33e9edf61d66a15098adcd5d9f))
 - complete the CHANGELOG-GitHub.md automatically ([5af3087](https://github.com///commit/5af30873260716ddde673ef019626e222284b68e))
@@ -15,6 +16,7 @@
 
 ### Bug Fixes
 
+- delete the useless package ([a403086](https://github.com///commit/a403086eee12445e8f625c642e26b6133157feb6))
 - rebuild whole the structure ([547b147](https://github.com///commit/547b1472f1d8b89377570ceffd3c1f0745d03e68))
 
 ### Chore
