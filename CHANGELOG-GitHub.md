@@ -18,12 +18,13 @@
 
 ### Bug Fixes
 
+- remove the process bar, but keep its deps temporarily ([e08616a](https://github.com///commit/e08616ac818bf22472fc3dad5165654014720230))
 - delete the useless package ([a403086](https://github.com///commit/a403086eee12445e8f625c642e26b6133157feb6))
 - rebuild whole the structure ([547b147](https://github.com///commit/547b1472f1d8b89377570ceffd3c1f0745d03e68))
 
 ### Chore
 
-- update CHANGELOG-GitHub.md ([b5e7ac4](https://github.com///commit/b5e7ac478532251b1399326cdc2019e6c24a2392))
+- update CHANGELOG-GitHub.md ([47fc025](https://github.com///commit/47fc025ef3be818f2462854aae4243f83ee7c958))
 - modify unimportant somthing ([ff25254](https://github.com///commit/ff252548957d972620e1ae7ea0793857ebee0674))
 
 ### Dependencies
