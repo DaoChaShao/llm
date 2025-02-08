@@ -25,7 +25,7 @@ def sidebar_params_download():
 
     with sidebar:
         header("Parameters")
-        models: list = ["qwen/Qwen2.5-7B-Instruct", ]
+        models: list = ["qwen/Qwen2.5-0.5B-Instruct", ]
         model_name = selectbox("Model Name", ["Select"] + models)
         if model_name != "Select":
             parameters["model_name"] = model_name
@@ -34,4 +34,10 @@ def sidebar_params_download():
 
 
 def scope_model_downloader(model_name: str):
-    model_dir = snapshot_download("Qwen/Qwen2.5-0.5B-Instruct")
+    local_path: str = "models/"
+    model_dir = snapshot_download(
+        model_name,
+        local_dir=local_path,
+        revision="master",
+        max_workers=8,
+    )
