@@ -1,9 +1,10 @@
 from modelscope import snapshot_download
-from streamlit import Page, navigation, sidebar
+from streamlit import Page, navigation, sidebar, header, selectbox
 
 
-def subpages_setter():
-    subpage_pages: list = ["../subpages/home.py", "../subpages/models.py"]
+def subpages_setter() -> None:
+    """ Set the subpages on the sidebar """
+    subpage_pages: list = ["subpages/home.py", "subpages/models.py"]
     subpage_titles: list = ["Home", "Model Download"]
     subpage_icons: list = [":material/home:", ":material/download:"]
 
@@ -19,8 +20,17 @@ def subpages_setter():
     pages.run()
 
 
-def sidebar_params():
-    pass
+def sidebar_params_download():
+    parameters = {}
+
+    with sidebar:
+        header("Parameters")
+        models: list = ["qwen/Qwen2.5-7B-Instruct", ]
+        model_name = selectbox("Model Name", ["Select"] + models)
+        if model_name != "Select":
+            parameters["model_name"] = model_name
+
+    return parameters
 
 
 def scope_model_downloader(model_name: str):
