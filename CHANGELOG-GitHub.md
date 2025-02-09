@@ -5,6 +5,7 @@
 
 ### Features
 
+- complete the new function of the setter of transferring text to images ([67af9e1](https://github.com/DaoChaShao/llm-text2images/commit/67af9e1130280d287293e3175598441e4829f3d0))
 - complete the basic function of put and get input with markdown style ([ff9d9b2](https://github.com/DaoChaShao/llm-text2images/commit/ff9d9b219cae12e7fcbc1158a75de637d4975883))
 - complete a new function to generate a text area ([f5f94e3](https://github.com/DaoChaShao/llm-text2images/commit/f5f94e3454e136aacf1f1edee8b99d3d9b6b8ad9))
 - add the function of download button to download a model ([e7a266c](https://github.com/DaoChaShao/llm-text2images/commit/e7a266cb5aace75beadd4c182d7254bfb3b07a7d))
@@ -32,7 +33,11 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([203df91](https://github.com/DaoChaShao/llm-text2images/commit/203df91cdde5dc11a822c3c1e983c9391c0029a1))
+- update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
+
+### Performance Improvements
+
+- promote the performance of the system in text2image and image2text tasks. ([e2bc1ba](https://github.com/DaoChaShao/llm-text2images/commit/e2bc1ba7b751a5406255b6218b7d552b72ec5a86))
 
 ### Dependencies
 
