@@ -1,6 +1,6 @@
 from modelscope import snapshot_download
 from streamlit import (Page, navigation, sidebar, header, selectbox,
-                       text_area)
+                       text_area, empty)
 
 
 def subpages_setter() -> None:
@@ -46,8 +46,40 @@ def scope_model_downloader(model_name: str):
 
 
 def zone_text(zone_height: int = 300, content_size: int = 300) -> str:
+    """ Create a text area for inputting text """
     input_text = text_area(
         "Content", placeholder="Type something here", height=zone_height, max_chars=content_size,
-        help="This is a text area. You can type a lot of text here."
+        help="This is a text area. Before your enter, adjust the size of the content zone FIRSTLY."
     )
     return input_text
+
+
+def text2images_setter(text: str, length: int, message: empty):
+    """ Transferring text to images """
+    options: list[str] = ["Horizontal", "Squarish", "Vertical"]
+    layout: str = sidebar.segmented_control(
+        "Image Layout", options, default="Horizontal", selection_mode="single",
+        help="Choose the layout of the images."
+    )
+    if layout:
+        match layout:
+            case "Horizontal":
+                image_width: int = 1080
+                image_height: int = 1440
+                sidebar.caption(f"Horizontal layout (3:4): {image_width} x {image_height} px.")
+            case "Squarish":
+                image_width: int = 1080
+                image_height: int = 1080
+                sidebar.caption(f"Squarish layout (1:1): {image_width} x {image_height} px.")
+            case "Vertical":
+                image_width: int = 1280
+                image_height: int = 720
+                sidebar.caption(f"Vertical layout (16:9): {image_width} x {image_height} px.")
+
+        if sidebar.button(
+                "Generate Images", on_click=None, args=None, kwargs=None, disabled=False,
+                help="Click to generate images."
+        ):
+            pass
+    else:
+        message.warning("Please select the layout of the images.")
