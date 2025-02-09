@@ -1,4 +1,4 @@
 git-changelog==2.5.3
 modelscope==1.22.3
 streamlit==1.42.0
-stqdm==0.0.5
+pillow~=11.1.0
