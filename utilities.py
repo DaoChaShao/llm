@@ -7,21 +7,29 @@ from textwrap import wrap
 
 def subpages_setter() -> None:
     """ Set the subpages on the sidebar """
-    subpage_pages: list = ["subpages/home.py", "subpages/models.py", "subpages/text2images.py"]
-    subpage_titles: list = ["Home", "Model Download", "Text Transfer"]
-    subpage_icons: list = [":material/home:", ":material/download:", ":material/photo_library:"]
+    pages: dict = {
+        "page": [
+            "subpages/1_home.py",
+            "subpages/2_models.py",
+            "subpages/3_title2images.py",
+            "subpages/4_content2images.py",
+        ],
+        "title": ["Home", "Model Download", "Title to Image Transfer", "Content to Image Transfer"],
+        "icon": [":material/home:", ":material/download:", ":material/photo_library:", ":material/image:"],
+    }
 
-    subpages: dict = {
+    page_structure: dict = {
         "Introduction": [
-            Page(page=subpage_pages[0], title=subpage_titles[0], icon=subpage_icons[0]),
+            Page(page=pages["page"][0], title=pages["title"][0], icon=pages["icon"][0]),
         ],
         "Actions": [
-            Page(page=subpage_pages[1], title=subpage_titles[1], icon=subpage_icons[1]),
-            Page(page=subpage_pages[2], title=subpage_titles[2], icon=subpage_icons[2]),
+            Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
+            Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
+            Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
         ],
     }
-    pages = navigation(subpages)
-    pages.run()
+    pg = navigation(page_structure, position="sidebar", expanded=True)
+    pg.run()
 
 
 def sidebar_params_download() -> dict:
@@ -47,29 +55,41 @@ def scope_model_downloader(model_name: str):
     )
 
 
-def zone_text(zone_height: int = 300, content_max: int = 300) -> str:
-    """ Create a text area for inputting text """
-    input_text = text_area(
-        "Content", placeholder="Type something here", height=zone_height, max_chars=content_max,
-        help="This is a text area. Before your enter, adjust the size of the content zone FIRSTLY."
-    )
-    return input_text
+def content2images_params() -> dict:
+    """ Set and get parameters for content to images """
+    parameters: dict = {}
+    with sidebar:
+        header("Parameters")
+        options: list = [300, 400, 500, 600]
+        zone_height: int = sidebar.slider(
+            "Zone Height", min_value=300, max_value=600, value=300, step=100, format="%d",
+            help="Adjust the height of the text zone."
+        )
+        parameters["zone_height"]: int = zone_height
+        content_max: int = sidebar.slider(
+            "Content Max Length", min_value=100, max_value=900, value=300, step=100, format="%d",
+            help="Before your enter, adjust the size of the content zone FIRSTLY."
+        )
+        parameters["content_max"]: int = content_max
+        content_size: int = sidebar.slider(
+            "The Font Size of Your Content", min_value=12, max_value=36, value=16, step=2, format="%d",
+            help="Before your enter, adjust the size of the content zone FIRSTLY."
+        )
+        parameters["font_size"]: int = content_size
+
+    return parameters
 
 
-def text2images_setter(title: str, title_size: int, content: str, content_size: int, message: empty):
+def text2images_setter(title: str, title_size: int, message: empty):
     """ Transferring text to images """
     options: list[str] = ["Horizontal", "Squarish", "Vertical"]
     layout: str = sidebar.segmented_control(
         "Image Layout", options, default="Horizontal", selection_mode="single",
         help="Choose the layout of the images."
     )
-    title_line_space: int = sidebar.slider(
-        "Title Line Space", min_value=30, max_value=60, value=36, step=2, format="%d",
+    line_space: int = sidebar.slider(
+        "Line Space", min_value=30, max_value=60, value=36, step=2, format="%d",
         help="Adjust the space between the title and the content."
-    )
-    content_line_space: int = sidebar.slider(
-        "Content Line Space", min_value=1, max_value=10, value=3, step=1, format="%d",
-        help="Adjust the space between the content and the next line."
     )
     col_title, col_content = sidebar.columns(2, vertical_alignment="bottom", gap="large")
     color_font: str = col_title.color_picker(
@@ -97,7 +117,8 @@ def text2images_setter(title: str, title_size: int, content: str, content_size: 
                 sidebar.caption(f"Vertical layout (16:9): {image_width} x {image_height} px.")
 
         if sidebar.button("Generate Images", help="Click to generate images."):
-            image_generator(title, title_size, title_line_space, color_font, color_bg, image_width, image_height)
+            image_generator(title, title_size, line_space, color_font, color_bg, image_width, image_height)
+            message.success("Images generated successfully.")
         else:
             message.info("Now you can push the button to generate images.")
     else:
@@ -107,6 +128,9 @@ def text2images_setter(title: str, title_size: int, content: str, content_size: 
 def image_generator(
         text: str, text_size: int, text_line_space: int, color_font: str, color_bg: str, width: int, height: int):
     """ Generate images based on input """
+    from PIL import Image, ImageDraw, ImageFont
+    import textwrap
+
     # Set up fonts
     font_selected: str = "fonts/ZCOOLKuaiLe-Regular.ttf"
     font = ImageFont.truetype(font_selected, text_size, encoding="utf-8")
@@ -114,12 +138,12 @@ def image_generator(
     img: Image = Image.new("RGB", (width, height), color_bg)
     draw = ImageDraw.Draw(img)
 
-    # Calculate the width of each chinese character
-    char_width: float = font.getbbox("中")[2]
     # Calculate the max number of characters in each line
-    characters_in_line: int = int(width // char_width)
+    char_width: float = font.getbbox("中")[2]  # Single Chinese character width
+    max_chars_per_line: int = int(width // char_width)  # How many characters fit in one line
 
-    wrapped_text: list[str] = wrap(text, width=characters_in_line)
+    # Wrap text
+    wrapped_text: list[str] = textwrap.wrap(text, width=max_chars_per_line)
 
     # Calculate the height of each line
     line_height: float = font.getbbox("中")[3] - font.getbbox("中")[1] + text_line_space
@@ -127,10 +151,13 @@ def image_generator(
     # Calculate the starting position of the text
     y_start = max(50, int((height - len(wrapped_text) * line_height) // 2))
 
-    # Draw the text on the image
+    # Draw the text on the image with better centering
     y_offset = y_start
     for line in wrapped_text:
-        draw.text((50, y_offset), line, fill=color_font, font=font)
+        text_width = font.getlength(line)  # Get the actual width of the whole line
+        x_start = (width - text_width) // 2  # Center horizontally
+
+        draw.text((x_start, y_offset), line, fill=color_font, font=font)
         y_offset += line_height
 
     image(img, output_format="PNG", use_container_width=True)
