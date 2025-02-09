@@ -30,6 +30,10 @@
 - update CHANGELOG-GitHub.md ([256df62](https://github.com/DaoChaShao/llm-text2images/commit/256df6236ab4c52d851a0ab539693b49d2855e29))
 - modify unimportant somthing ([ff25254](https://github.com/DaoChaShao/llm-text2images/commit/ff252548957d972620e1ae7ea0793857ebee0674))
 
+### Docs
+
+- update CHANGELOG-GitHub.md ([203df91](https://github.com/DaoChaShao/llm-text2images/commit/203df91cdde5dc11a822c3c1e983c9391c0029a1))
+
 ### Dependencies
 
 - add the stqdm package ([6378203](https://github.com/DaoChaShao/llm-text2images/commit/63782038306c4ccf649a7475509c31a96da214cc))
