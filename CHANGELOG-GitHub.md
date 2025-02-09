@@ -5,6 +5,9 @@
 
 ### Features
 
+- add the new page, and create a new function ([48a6e67](https://github.com/DaoChaShao/llm-text2images/commit/48a6e67c8e388aeeb96a8f63b9ad491a79c7bf5b))
+- simplify the function and rename the page ([f6a3603](https://github.com/DaoChaShao/llm-text2images/commit/f6a360332f3aaab187c766ec365af958c188fe25))
+- rebuilt the coding structure of the project ([888ed04](https://github.com/DaoChaShao/llm-text2images/commit/888ed0478752f73e9eecac398e4646057ac12326))
 - modify and promote the function of text2images.py; simultaneously, add a new function that generates text-based images. ([7820c71](https://github.com/DaoChaShao/llm-text2images/commit/7820c7176faa4ee4c5640b9efd3e04bfd636e845))
 - complete the new function of the setter of transferring text to images ([67af9e1](https://github.com/DaoChaShao/llm-text2images/commit/67af9e1130280d287293e3175598441e4829f3d0))
 - complete the basic function of put and get input with markdown style ([ff9d9b2](https://github.com/DaoChaShao/llm-text2images/commit/ff9d9b219cae12e7fcbc1158a75de637d4975883))
@@ -29,12 +32,14 @@
 
 ### Chore
 
+- rebuild and rename the page ([c713caa](https://github.com/DaoChaShao/llm-text2images/commit/c713caae73c3180d27b78fa5a6f5858bba5a9421))
+- rename the page ([38e1dd7](https://github.com/DaoChaShao/llm-text2images/commit/38e1dd7043a8b153f4e7a97fcfb90256c165a399))
 - update CHANGELOG-GitHub.md ([256df62](https://github.com/DaoChaShao/llm-text2images/commit/256df6236ab4c52d851a0ab539693b49d2855e29))
 - modify unimportant somthing ([ff25254](https://github.com/DaoChaShao/llm-text2images/commit/ff252548957d972620e1ae7ea0793857ebee0674))
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([ef966a3](https://github.com/DaoChaShao/llm-text2images/commit/ef966a3137313bc6fffc11f86e8ba9226b0ab757))
+- update CHANGELOG-GitHub.md ([2141e11](https://github.com/DaoChaShao/llm-text2images/commit/2141e113b94e0647f50ae5c4012441ce9fdaa026))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
