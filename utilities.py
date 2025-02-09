@@ -45,9 +45,9 @@ def scope_model_downloader(model_name: str):
     )
 
 
-def zone_text() -> str:
+def zone_text(zone_height: int = 300, content_size: int = 300) -> str:
     input_text = text_area(
-        "Content", placeholder="Type something here", height=600,
+        "Content", placeholder="Type something here", height=zone_height, max_chars=content_size,
         help="This is a text area. You can type a lot of text here."
     )
     return input_text
