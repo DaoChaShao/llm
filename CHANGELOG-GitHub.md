@@ -5,6 +5,7 @@
 
 ### Features
 
+- modify and promote the function of text2images.py; simultaneously, add a new function that generates text-based images. ([7820c71](https://github.com/DaoChaShao/llm-text2images/commit/7820c7176faa4ee4c5640b9efd3e04bfd636e845))
 - complete the new function of the setter of transferring text to images ([67af9e1](https://github.com/DaoChaShao/llm-text2images/commit/67af9e1130280d287293e3175598441e4829f3d0))
 - complete the basic function of put and get input with markdown style ([ff9d9b2](https://github.com/DaoChaShao/llm-text2images/commit/ff9d9b219cae12e7fcbc1158a75de637d4975883))
 - complete a new function to generate a text area ([f5f94e3](https://github.com/DaoChaShao/llm-text2images/commit/f5f94e3454e136aacf1f1edee8b99d3d9b6b8ad9))
@@ -33,15 +34,21 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([5660687](https://github.com/DaoChaShao/llm-text2images/commit/56606872afa65a52421e7953e9859c7393612eaf))
+- update CHANGELOG-GitHub.md ([91df65b](https://github.com/DaoChaShao/llm-text2images/commit/91df65ba312cff62a2d6ed034ca3095b3735764d))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
 
+- promote the functions of the program ([ecdb392](https://github.com/DaoChaShao/llm-text2images/commit/ecdb39284ad292649657147fb5f27079678d9d5c))
 - promote the performance of the system in text2image and image2text tasks. ([e2bc1ba](https://github.com/DaoChaShao/llm-text2images/commit/e2bc1ba7b751a5406255b6218b7d552b72ec5a86))
+
+### Build
+
+- add the font to the project ([b00fe9e](https://github.com/DaoChaShao/llm-text2images/commit/b00fe9ed704dbcd80e10c60fc87e503fe13b209b))
 
 ### Dependencies
 
+- add the pillow (PIL) package to conduct the image manipulation. ([a509750](https://github.com/DaoChaShao/llm-text2images/commit/a509750b0b7095c9addf748788377d85091cfad9))
 - add the stqdm package ([6378203](https://github.com/DaoChaShao/llm-text2images/commit/63782038306c4ccf649a7475509c31a96da214cc))
 - add model downloading functionality and update requirements ([9a0bf48](https://github.com/DaoChaShao/llm-text2images/commit/9a0bf48fd2d47632eb920859b299bdf4686a487f))
 
