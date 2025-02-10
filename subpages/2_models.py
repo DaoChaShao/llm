@@ -10,8 +10,9 @@ with expander("Model Download", expanded=True):
 empty_message = empty()
 
 # Set the sidebar parameters
-parameters = sidebar_params_download()
+parameters = sidebar_params_download(empty_message)
 if parameters:
     if sidebar.button("Download Model", help="Click to download the model"):
         with spinner("Downloading the model..."):
-            scope_model_downloader(parameters["model_name"])
+            scope_model_downloader(parameters)
+            empty_message.success("Model downloaded successfully!")
