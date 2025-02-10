@@ -37,6 +37,7 @@
 
 ### Chore
 
+- add the TODO part ([4d58faa](https://github.com/DaoChaShao/llm-text2images/commit/4d58faa102598dc764e85e711d342bd171475607))
 - rename the files ([c1f6e07](https://github.com/DaoChaShao/llm-text2images/commit/c1f6e07bb893f9a8083875ac662c07e884b7d65f))
 - update the introduction ([a77b6c4](https://github.com/DaoChaShao/llm-text2images/commit/a77b6c4d1074e9c3f1abbc97f36df46f285f3092))
 - rename the file of the red note part ([b5e926d](https://github.com/DaoChaShao/llm-text2images/commit/b5e926d8b5a4188957cc7b30b772fd7abaf4e09e))
@@ -49,13 +50,14 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([ce5dfd5](https://github.com/DaoChaShao/llm-text2images/commit/ce5dfd58c8aba4ba1658432224900689070881dc))
+- update CHANGELOG-GitHub.md ([01524bd](https://github.com/DaoChaShao/llm-text2images/commit/01524bda167999365f32cabd680b11e5b499507d))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-text2images/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
 
+- add collect the parameters function of accessing the online model ([dffe88f](https://github.com/DaoChaShao/llm-text2images/commit/dffe88f77d4858aeb91312513a73ded4e1dfd9b3))
 - add the new code to constrain the prompt of the downloaded model ([3ba3273](https://github.com/DaoChaShao/llm-text2images/commit/3ba32733709c3f2e71a6a440e42fd098cabb2809))
 - rebuild the structure of the page of title2images ([f924c60](https://github.com/DaoChaShao/llm-text2images/commit/f924c60f86db6b847cc77a5147a0e8a5d9ea172d))
 - promote the performance of the function of text2images ([a11f2d1](https://github.com/DaoChaShao/llm-text2images/commit/a11f2d1947a40cd4db1ac856e2b35bc2779cb4d7))
