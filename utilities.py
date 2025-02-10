@@ -9,13 +9,26 @@ def subpages_setter() -> None:
     """ Set the subpages on the sidebar """
     pages: dict = {
         "page": [
-            "subpages/1_home.py",
-            "subpages/2_models.py",
-            "subpages/9_title2images.py",
-            "subpages/10_content2images.py",
+            "subpages/00_home.py",
+            "subpages/10_models.py",
+            "subpages/11_chatbot.py",
+            "subpages/20_title2images.py",
+            "subpages/21_content2images.py",
         ],
-        "title": ["Home", "Model Download", "Title to Image Transfer", "Content to Image Transfer"],
-        "icon": [":material/home:", ":material/download:", ":material/photo_library:", ":material/image:"],
+        "title": [
+            "Home",
+            "Model Download",
+            "ChatBot",
+            "Title to Image Transfer",
+            "Content to Image Transfer",
+        ],
+        "icon": [
+            ":material/home:",
+            ":material/download:",
+            ":material/robot:",
+            ":material/photo_library:",
+            ":material/image:"
+        ],
     }
 
     page_structure: dict = {
@@ -24,11 +37,11 @@ def subpages_setter() -> None:
         ],
         "LLM Actions": [
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
-
+            Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
         ],
         "Red Note": [
-            Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
             Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
+            Page(page=pages["page"][4], title=pages["title"][4], icon=pages["icon"][4]),
         ],
     }
     pg = navigation(page_structure, position="sidebar", expanded=True)
@@ -57,7 +70,7 @@ def sidebar_params_download(message: empty) -> dict:
     return parameters
 
 
-def scope_model_downloader(params: dict) -> None:
+def model_downloader_scope(params: dict) -> None:
     local_path: str = "models/"
     snapshot_download(
         params["model_name"],
@@ -69,7 +82,7 @@ def scope_model_downloader(params: dict) -> None:
     )
 
 
-def scope_model_loader(params: dict, sys_content: str, prompt: str) -> str:
+def model_loader_scope(params: dict, sys_content: str, prompt: str) -> str:
     """ Load the model and tokenizer """
     # Initialize the model
     model = AutoModelForCausalLM.from_pretrained(
@@ -101,6 +114,10 @@ def scope_model_loader(params: dict, sys_content: str, prompt: str) -> str:
     ]
 
     return tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+
+def model_loader_api():
+    pass
 
 
 def content2images_params() -> dict:
