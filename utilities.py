@@ -80,11 +80,30 @@ def content2images_params() -> dict:
     return parameters
 
 
-def text2images_setter(title: str, title_size: int, message: empty):
+def text2images_setter(text: str, message: empty):
     """ Transferring text to images """
-    options: list[str] = ["Horizontal", "Squarish", "Vertical"]
+    options_box: list[str] = ["Wei Xiao", "Happy", "Cao"]
+    font_selected: str = sidebar.selectbox(
+        "Font", ["Select"] + options_box, placeholder="Select a font",
+        help="Choose a font for the title."
+    )
+    match font_selected:
+        case "Wei Xiao":
+            font_selected: str = "fonts/ZCOOLXiaoWei-Regular.ttf"
+        case "Happy":
+            font_selected: str = "fonts/ZCOOLKuaiLe-Regular.ttf"
+        case "Cao":
+            font_selected: str = "fonts/LiuJianMaoCao-Regular.ttf"
+        case _:
+            message.error("Please select a font.")
+
+    font_size: int = sidebar.slider(
+        "The Font Size of Your Title", min_value=100, max_value=240, value=168, step=2, format="%d",
+        help="Adjust the fonts size of your content."
+    )
+    options_seg: list[str] = ["Horizontal", "Squarish", "Vertical"]
     layout: str = sidebar.segmented_control(
-        "Image Layout", options, default="Horizontal", selection_mode="single",
+        "Image Layout", options_seg, default="Horizontal", selection_mode="single",
         help="Choose the layout of the images."
     )
     line_space: int = sidebar.slider(
@@ -117,7 +136,7 @@ def text2images_setter(title: str, title_size: int, message: empty):
                 sidebar.caption(f"Vertical layout (16:9): {image_width} x {image_height} px.")
 
         if sidebar.button("Generate Images", help="Click to generate images."):
-            image_generator(title, title_size, line_space, color_font, color_bg, image_width, image_height)
+            image_generator(text, font_selected, font_size, line_space, color_font, color_bg, image_width, image_height)
             message.success("Images generated successfully.")
         else:
             message.info("Now you can push the button to generate images.")
@@ -126,14 +145,14 @@ def text2images_setter(title: str, title_size: int, message: empty):
 
 
 def image_generator(
-        text: str, text_size: int, text_line_space: int, color_font: str, color_bg: str, width: int, height: int):
+        text: str, font_selected: str, font_size: int, text_line_space: int, color_font: str, color_bg: str, width: int,
+        height: int):
     """ Generate images based on input """
     from PIL import Image, ImageDraw, ImageFont
     import textwrap
 
     # Set up fonts
-    font_selected: str = "fonts/ZCOOLKuaiLe-Regular.ttf"
-    font = ImageFont.truetype(font_selected, text_size, encoding="utf-8")
+    font = ImageFont.truetype(font_selected, font_size, encoding="utf-8")
 
     img: Image = Image.new("RGB", (width, height), color_bg)
     draw = ImageDraw.Draw(img)
