@@ -42,7 +42,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([75804b4](https://github.com/DaoChaShao/llm-text2images/commit/75804b46bda5a0fba4ef40be64649153d8385dc3))
+- update CHANGELOG-GitHub.md ([632245e](https://github.com/DaoChaShao/llm-text2images/commit/632245e0d723e81fed996d6c189472c964548153))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
