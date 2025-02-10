@@ -5,6 +5,8 @@
 
 ### Features
 
+- add a new page that can use the chatbot ([f01f545](https://github.com/DaoChaShao/llm-text2images/commit/f01f5457ac3e61478a4ecdfb2d39fc3913f601b4))
+- add a new function of model loader via api and rename the other model loader ([9be1067](https://github.com/DaoChaShao/llm-text2images/commit/9be1067d5d86fcdb1a93fc1efdbe53f617d88984))
 - add the new function that loading the model of Modelscope ([2765747](https://github.com/DaoChaShao/llm-text2images/commit/2765747ab12a99a21d90d4da6889306645525715))
 - add the Modelfile to help create or remove the downloaded model in or out of the ollama client. The parameters in the Modelfile should be used capitalized. ([f91bde6](https://github.com/DaoChaShao/llm-text2images/commit/f91bde6d6a00a3bb6b133ee16e76985a0a94dde7))
 - add the new page, and create a new function ([48a6e67](https://github.com/DaoChaShao/llm-text2images/commit/48a6e67c8e388aeeb96a8f63b9ad491a79c7bf5b))
@@ -35,6 +37,7 @@
 
 ### Chore
 
+- rename the files ([c1f6e07](https://github.com/DaoChaShao/llm-text2images/commit/c1f6e07bb893f9a8083875ac662c07e884b7d65f))
 - update the introduction ([a77b6c4](https://github.com/DaoChaShao/llm-text2images/commit/a77b6c4d1074e9c3f1abbc97f36df46f285f3092))
 - rename the file of the red note part ([b5e926d](https://github.com/DaoChaShao/llm-text2images/commit/b5e926d8b5a4188957cc7b30b772fd7abaf4e09e))
 - add the message notification ([b0f5014](https://github.com/DaoChaShao/llm-text2images/commit/b0f5014e4b285fc9742f40c075f2ccf25f916c74))
@@ -46,7 +49,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([9e7088b](https://github.com/DaoChaShao/llm-text2images/commit/9e7088b64191151e6ca472335f0adbd9a2e37fa3))
+- update CHANGELOG-GitHub.md ([664af17](https://github.com/DaoChaShao/llm-text2images/commit/664af17771055faf5c9e59de5fce9f342e4a4814))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-text2images/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
