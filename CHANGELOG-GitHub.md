@@ -32,6 +32,7 @@
 
 ### Chore
 
+- change the position of import and rename the package of the file ([3216e80](https://github.com/DaoChaShao/llm-text2images/commit/3216e802f2b350a0e1d84188d295e978bb987494))
 - rebuild and rename the page ([c713caa](https://github.com/DaoChaShao/llm-text2images/commit/c713caae73c3180d27b78fa5a6f5858bba5a9421))
 - rename the page ([38e1dd7](https://github.com/DaoChaShao/llm-text2images/commit/38e1dd7043a8b153f4e7a97fcfb90256c165a399))
 - update CHANGELOG-GitHub.md ([256df62](https://github.com/DaoChaShao/llm-text2images/commit/256df6236ab4c52d851a0ab539693b49d2855e29))
@@ -39,7 +40,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([5577c60](https://github.com/DaoChaShao/llm-text2images/commit/5577c6037d2682a55bc2ae3ef5d5006916447cb5))
+- update CHANGELOG-GitHub.md ([6b6f81f](https://github.com/DaoChaShao/llm-text2images/commit/6b6f81fb87e10cf72d42dd9161686e55e4982a21))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
