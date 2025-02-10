@@ -25,6 +25,7 @@
 
 ### Bug Fixes
 
+- fix the download method of the model. ([20c298e](https://github.com/DaoChaShao/llm-text2images/commit/20c298e9ac9bc4343d5f82ef487181674ecac694))
 - modify the function that generating a text area ([cee9b6d](https://github.com/DaoChaShao/llm-text2images/commit/cee9b6d94fe387b89992c09414090e350757a2eb))
 - remove the process bar, but keep its deps temporarily ([e08616a](https://github.com/DaoChaShao/llm-text2images/commit/e08616ac818bf22472fc3dad5165654014720230))
 - delete the useless package ([a403086](https://github.com/DaoChaShao/llm-text2images/commit/a403086eee12445e8f625c642e26b6133157feb6))
@@ -32,6 +33,7 @@
 
 ### Chore
 
+- add the message notification ([b0f5014](https://github.com/DaoChaShao/llm-text2images/commit/b0f5014e4b285fc9742f40c075f2ccf25f916c74))
 - change the position of import and rename the package of the file ([3216e80](https://github.com/DaoChaShao/llm-text2images/commit/3216e802f2b350a0e1d84188d295e978bb987494))
 - rebuild and rename the page ([c713caa](https://github.com/DaoChaShao/llm-text2images/commit/c713caae73c3180d27b78fa5a6f5858bba5a9421))
 - rename the page ([38e1dd7](https://github.com/DaoChaShao/llm-text2images/commit/38e1dd7043a8b153f4e7a97fcfb90256c165a399))
@@ -40,7 +42,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([08bd5eb](https://github.com/DaoChaShao/llm-text2images/commit/08bd5ebf3d05147093e56482cb8d83bc6f2ee664))
+- update CHANGELOG-GitHub.md ([75804b4](https://github.com/DaoChaShao/llm-text2images/commit/75804b46bda5a0fba4ef40be64649153d8385dc3))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
