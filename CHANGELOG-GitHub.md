@@ -5,6 +5,7 @@
 
 ### Features
 
+- add the Modelfile to help create or remove the downloaded model in or out of the ollama client. The parameters in the Modelfile should be used capitalized. ([f91bde6](https://github.com/DaoChaShao/llm-text2images/commit/f91bde6d6a00a3bb6b133ee16e76985a0a94dde7))
 - add the new page, and create a new function ([48a6e67](https://github.com/DaoChaShao/llm-text2images/commit/48a6e67c8e388aeeb96a8f63b9ad491a79c7bf5b))
 - simplify the function and rename the page ([f6a3603](https://github.com/DaoChaShao/llm-text2images/commit/f6a360332f3aaab187c766ec365af958c188fe25))
 - rebuilt the coding structure of the project ([888ed04](https://github.com/DaoChaShao/llm-text2images/commit/888ed0478752f73e9eecac398e4646057ac12326))
@@ -42,7 +43,8 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([632245e](https://github.com/DaoChaShao/llm-text2images/commit/632245e0d723e81fed996d6c189472c964548153))
+- add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
+- update CHANGELOG-GitHub.md ([a074cbd](https://github.com/DaoChaShao/llm-text2images/commit/a074cbd94af0b361a3c24c0483770582661bb381))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
