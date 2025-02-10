@@ -5,6 +5,7 @@
 
 ### Features
 
+- add the new function that loading the model of Modelscope ([2765747](https://github.com/DaoChaShao/llm-text2images/commit/2765747ab12a99a21d90d4da6889306645525715))
 - add the Modelfile to help create or remove the downloaded model in or out of the ollama client. The parameters in the Modelfile should be used capitalized. ([f91bde6](https://github.com/DaoChaShao/llm-text2images/commit/f91bde6d6a00a3bb6b133ee16e76985a0a94dde7))
 - add the new page, and create a new function ([48a6e67](https://github.com/DaoChaShao/llm-text2images/commit/48a6e67c8e388aeeb96a8f63b9ad491a79c7bf5b))
 - simplify the function and rename the page ([f6a3603](https://github.com/DaoChaShao/llm-text2images/commit/f6a360332f3aaab187c766ec365af958c188fe25))
@@ -34,6 +35,7 @@
 
 ### Chore
 
+- rename the file of the red note part ([b5e926d](https://github.com/DaoChaShao/llm-text2images/commit/b5e926d8b5a4188957cc7b30b772fd7abaf4e09e))
 - add the message notification ([b0f5014](https://github.com/DaoChaShao/llm-text2images/commit/b0f5014e4b285fc9742f40c075f2ccf25f916c74))
 - change the position of import and rename the package of the file ([3216e80](https://github.com/DaoChaShao/llm-text2images/commit/3216e802f2b350a0e1d84188d295e978bb987494))
 - rebuild and rename the page ([c713caa](https://github.com/DaoChaShao/llm-text2images/commit/c713caae73c3180d27b78fa5a6f5858bba5a9421))
@@ -43,12 +45,14 @@
 
 ### Docs
 
+- add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-text2images/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
+- update CHANGELOG-GitHub.md ([24223bc](https://github.com/DaoChaShao/llm-text2images/commit/24223bc136b819c6ca0c033898a2fda7652c101d))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
-- update CHANGELOG-GitHub.md ([a074cbd](https://github.com/DaoChaShao/llm-text2images/commit/a074cbd94af0b361a3c24c0483770582661bb381))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
 
+- add the new code to constrain the prompt of the downloaded model ([3ba3273](https://github.com/DaoChaShao/llm-text2images/commit/3ba32733709c3f2e71a6a440e42fd098cabb2809))
 - rebuild the structure of the page of title2images ([f924c60](https://github.com/DaoChaShao/llm-text2images/commit/f924c60f86db6b847cc77a5147a0e8a5d9ea172d))
 - promote the performance of the function of text2images ([a11f2d1](https://github.com/DaoChaShao/llm-text2images/commit/a11f2d1947a40cd4db1ac856e2b35bc2779cb4d7))
 - promote the functions of the program ([ecdb392](https://github.com/DaoChaShao/llm-text2images/commit/ecdb39284ad292649657147fb5f27079678d9d5c))
@@ -60,6 +64,7 @@
 
 ### Dependencies
 
+- add the transformers package ([9409b0b](https://github.com/DaoChaShao/llm-text2images/commit/9409b0b79d94900353b1255da262805c02b7bfb7))
 - add the new two fonts ([24a962a](https://github.com/DaoChaShao/llm-text2images/commit/24a962aa221aa683eec674404a387920c6591223))
 - add the pillow (PIL) package to conduct the image manipulation. ([a509750](https://github.com/DaoChaShao/llm-text2images/commit/a509750b0b7095c9addf748788377d85091cfad9))
 - add the stqdm package ([6378203](https://github.com/DaoChaShao/llm-text2images/commit/63782038306c4ccf649a7475509c31a96da214cc))
