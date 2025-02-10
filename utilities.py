@@ -32,26 +32,37 @@ def subpages_setter() -> None:
     pg.run()
 
 
-def sidebar_params_download() -> dict:
+def sidebar_params_download(message: empty) -> dict:
     parameters = {}
 
     with sidebar:
         header("Parameters")
-        models: list = ["qwen/Qwen2.5-7B-Instruct-GGUF", ]
+        models: list[str] = ["qwen/Qwen2.5-7B-Instruct-GGUF", ]
         model_name = selectbox("Model Name", ["Select"] + models)
         if model_name != "Select":
-            parameters["model_name"] = model_name
+            if model_name == "qwen/Qwen2.5-7B-Instruct-GGUF":
+                patterns: list[str] = ["qwen2.5-7b-instruct-q2_k.gguf", "qwen2.5-7b-instruct-q3_k_m.gguf"]
+                pattern: str = selectbox("Pattern", ["Select"] + patterns)
+                if pattern != "Select":
+                    parameters["model_name"] = model_name
+                    parameters["file_pattern"] = pattern
+                else:
+                    message.error("Please select a pattern.")
+        else:
+            message.error("Please select a model.")
 
     return parameters
 
 
-def scope_model_downloader(model_name: str):
+def scope_model_downloader(params: dict):
     local_path: str = "models/"
     model_dir = snapshot_download(
-        model_name,
+        params["model_name"],
         local_dir=local_path,
         revision="master",
         max_workers=8,
+        allow_file_pattern=params["file_pattern"],
+        ignore_file_pattern=["._____temp", ".msc", ".mv"],
     )
 
 
