@@ -83,7 +83,7 @@ def model_downloader_scope(params: dict) -> None:
 
 
 def model_loader_scope(params: dict, sys_content: str, prompt: str) -> str:
-    """ Load the model and tokenizer """
+    """ Load the local model and tokenizer """
     # Initialize the model
     model = AutoModelForCausalLM.from_pretrained(
         params["model_name"],
@@ -116,7 +116,8 @@ def model_loader_scope(params: dict, sys_content: str, prompt: str) -> str:
     return tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
 
-def model_loader_api():
+def model_loader_deepseek_api(api_key: str, sys_content: str, prompt: str):
+    # TODO: Implement the deepseek API
     pass
 
 
