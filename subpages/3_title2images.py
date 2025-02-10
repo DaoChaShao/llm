@@ -14,12 +14,7 @@ title_text: str = text_input(
 )
 
 if title_text:
-    title_size: int = sidebar.slider(
-        "The Font Size of Your Title", min_value=100, max_value=240, value=168, step=2, format="%d",
-        help="Adjust the fonts size of your content."
-    )
-
-    text2images_setter(title_text, title_size, empty_message)
+    text2images_setter(title_text, empty_message)
 
 else:
     empty_message.error("Please enter a title for your content.")
