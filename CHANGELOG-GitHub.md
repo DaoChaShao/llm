@@ -1,7 +1,7 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com/DaoChaShao/llm-text2images/compare/be2391ecf9ec39e3abc1f9d9bfff49c24c89a878...0.1.0) (2025-02-09)
+## [0.1.0](https://github.com/DaoChaShao/llm-text2images/compare/be2391ecf9ec39e3abc1f9d9bfff49c24c89a878...0.1.0) (2025-02-10)
 
 ### Features
 
@@ -39,11 +39,13 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([82ba461](https://github.com/DaoChaShao/llm-text2images/commit/82ba4619b38952713064cbd6d9cdea2408360ed0))
+- update CHANGELOG-GitHub.md ([94685e0](https://github.com/DaoChaShao/llm-text2images/commit/94685e07135774b6bd21ac6d14c9d2ac76c070e2))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
 ### Performance Improvements
 
+- rebuild the structure of the page of title2images ([f924c60](https://github.com/DaoChaShao/llm-text2images/commit/f924c60f86db6b847cc77a5147a0e8a5d9ea172d))
+- promote the performance of the function of text2images ([a11f2d1](https://github.com/DaoChaShao/llm-text2images/commit/a11f2d1947a40cd4db1ac856e2b35bc2779cb4d7))
 - promote the functions of the program ([ecdb392](https://github.com/DaoChaShao/llm-text2images/commit/ecdb39284ad292649657147fb5f27079678d9d5c))
 - promote the performance of the system in text2image and image2text tasks. ([e2bc1ba](https://github.com/DaoChaShao/llm-text2images/commit/e2bc1ba7b751a5406255b6218b7d552b72ec5a86))
 
@@ -53,6 +55,7 @@
 
 ### Dependencies
 
+- add the new two fonts ([24a962a](https://github.com/DaoChaShao/llm-text2images/commit/24a962aa221aa683eec674404a387920c6591223))
 - add the pillow (PIL) package to conduct the image manipulation. ([a509750](https://github.com/DaoChaShao/llm-text2images/commit/a509750b0b7095c9addf748788377d85091cfad9))
 - add the stqdm package ([6378203](https://github.com/DaoChaShao/llm-text2images/commit/63782038306c4ccf649a7475509c31a96da214cc))
 - add model downloading functionality and update requirements ([9a0bf48](https://github.com/DaoChaShao/llm-text2images/commit/9a0bf48fd2d47632eb920859b299bdf4686a487f))
