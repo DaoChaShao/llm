@@ -1,7 +1,7 @@
 from modelscope import snapshot_download
 from PIL import Image, ImageDraw, ImageFont
 from streamlit import (Page, navigation, sidebar, header, selectbox,
-                       text_area, empty, image)
+                       empty, image)
 from textwrap import wrap
 
 
@@ -80,7 +80,7 @@ def content2images_params() -> dict:
     return parameters
 
 
-def text2images_setter(text: str, message: empty):
+def text2images_setter(text: str, message: empty) -> None:
     """ Transferring text to images """
     options_box: list[str] = ["Wei Xiao", "Happy", "Cao"]
     font_selected: str = sidebar.selectbox(
@@ -145,12 +145,12 @@ def text2images_setter(text: str, message: empty):
 
 
 def image_generator(
-        text: str, font_selected: str, font_size: int, text_line_space: int, color_font: str, color_bg: str, width: int,
-        height: int):
+        text: str,
+        font_selected: str, font_size: int,
+        text_line_space: int,
+        color_font: str, color_bg: str,
+        width: int, height: int) -> None:
     """ Generate images based on input """
-    from PIL import Image, ImageDraw, ImageFont
-    import textwrap
-
     # Set up fonts
     font = ImageFont.truetype(font_selected, font_size, encoding="utf-8")
 
@@ -162,7 +162,7 @@ def image_generator(
     max_chars_per_line: int = int(width // char_width)  # How many characters fit in one line
 
     # Wrap text
-    wrapped_text: list[str] = textwrap.wrap(text, width=max_chars_per_line)
+    wrapped_text: list[str] = wrap(text, width=max_chars_per_line)
 
     # Calculate the height of each line
     line_height: float = font.getbbox("中")[3] - font.getbbox("中")[1] + text_line_space
