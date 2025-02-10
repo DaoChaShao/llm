@@ -45,8 +45,8 @@
 
 ### Docs
 
+- update CHANGELOG-GitHub.md ([450bafb](https://github.com/DaoChaShao/llm-text2images/commit/450bafbda6ff984fc2308498f0a634577e1a60cd))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-text2images/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
-- update CHANGELOG-GitHub.md ([24223bc](https://github.com/DaoChaShao/llm-text2images/commit/24223bc136b819c6ca0c033898a2fda7652c101d))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
 
