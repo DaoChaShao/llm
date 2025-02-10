@@ -35,6 +35,7 @@
 
 ### Chore
 
+- update the introduction ([a77b6c4](https://github.com/DaoChaShao/llm-text2images/commit/a77b6c4d1074e9c3f1abbc97f36df46f285f3092))
 - rename the file of the red note part ([b5e926d](https://github.com/DaoChaShao/llm-text2images/commit/b5e926d8b5a4188957cc7b30b772fd7abaf4e09e))
 - add the message notification ([b0f5014](https://github.com/DaoChaShao/llm-text2images/commit/b0f5014e4b285fc9742f40c075f2ccf25f916c74))
 - change the position of import and rename the package of the file ([3216e80](https://github.com/DaoChaShao/llm-text2images/commit/3216e802f2b350a0e1d84188d295e978bb987494))
@@ -45,7 +46,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([450bafb](https://github.com/DaoChaShao/llm-text2images/commit/450bafbda6ff984fc2308498f0a634577e1a60cd))
+- update CHANGELOG-GitHub.md ([14d1979](https://github.com/DaoChaShao/llm-text2images/commit/14d1979f1e8cefbf653f807f53e28f7f0364baf0))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-text2images/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-text2images/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-text2images/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
