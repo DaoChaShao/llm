@@ -1,4 +1,4 @@
-from modelscope import snapshot_download
+from modelscope import snapshot_download, AutoModelForCausalLM, AutoTokenizer
 from PIL import Image, ImageDraw, ImageFont
 from streamlit import (Page, navigation, sidebar, header, selectbox,
                        empty, image)
@@ -11,8 +11,8 @@ def subpages_setter() -> None:
         "page": [
             "subpages/1_home.py",
             "subpages/2_models.py",
-            "subpages/3_title2images.py",
-            "subpages/4_content2images.py",
+            "subpages/9_title2images.py",
+            "subpages/10_content2images.py",
         ],
         "title": ["Home", "Model Download", "Title to Image Transfer", "Content to Image Transfer"],
         "icon": [":material/home:", ":material/download:", ":material/photo_library:", ":material/image:"],
@@ -22,8 +22,11 @@ def subpages_setter() -> None:
         "Introduction": [
             Page(page=pages["page"][0], title=pages["title"][0], icon=pages["icon"][0]),
         ],
-        "Actions": [
+        "LLM Actions": [
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
+
+        ],
+        "Red Note": [
             Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
             Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
         ],
@@ -37,8 +40,8 @@ def sidebar_params_download(message: empty) -> dict:
 
     with sidebar:
         header("Parameters")
-        models: list[str] = ["qwen/Qwen2.5-7B-Instruct-GGUF", ]
-        model_name = selectbox("Model Name", ["Select"] + models)
+        model_names: list[str] = ["qwen/Qwen2.5-7B-Instruct-GGUF", ]
+        model_name = selectbox("Model Name", ["Select"] + model_names)
         if model_name != "Select":
             if model_name == "qwen/Qwen2.5-7B-Instruct-GGUF":
                 patterns: list[str] = ["qwen2.5-7b-instruct-q2_k.gguf", "qwen2.5-7b-instruct-q3_k_m.gguf"]
@@ -54,9 +57,9 @@ def sidebar_params_download(message: empty) -> dict:
     return parameters
 
 
-def scope_model_downloader(params: dict):
+def scope_model_downloader(params: dict) -> None:
     local_path: str = "models/"
-    model_dir = snapshot_download(
+    snapshot_download(
         params["model_name"],
         local_dir=local_path,
         revision="master",
@@ -66,12 +69,45 @@ def scope_model_downloader(params: dict):
     )
 
 
+def scope_model_loader(params: dict, sys_content: str, prompt: str) -> str:
+    """ Load the model and tokenizer """
+    # Initialize the model
+    model = AutoModelForCausalLM.from_pretrained(
+        params["model_name"],
+        torch_dtype="auto",
+        device_map="auto"
+    )
+    # Initialize the tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(params["model_name"])
+
+    messages = [
+        {"role": "system", "content": sys_content},
+        {"role": "user", "content": prompt}
+    ]
+
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+    model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+    generated_ids = model.generate(
+        **model_inputs,
+        max_new_tokens=512
+    )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+    ]
+
+    return tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+
 def content2images_params() -> dict:
     """ Set and get parameters for content to images """
     parameters: dict = {}
     with sidebar:
         header("Parameters")
-        options: list = [300, 400, 500, 600]
         zone_height: int = sidebar.slider(
             "Zone Height", min_value=300, max_value=600, value=300, step=100, format="%d",
             help="Adjust the height of the text zone."
