@@ -5,6 +5,8 @@
 
 ### Features
 
+- add the new function about Milvus database, but failed because of lacking ducker. ([bbe2182](https://github.com///commit/bbe21828b492d967737b4c135f82f634ba662be1))
+- add the new function about Milvus database. ([6729d36](https://github.com///commit/6729d3603ec443f8759c963ec1d320baefdc9ea8))
 - add the new page to the website, to implement the new feature of knowledge base. ([4bccbda](https://github.com///commit/4bccbda1add60d312ef7871d4132a7f219e9acb8))
 - add a new page that can use the chatbot ([f01f545](https://github.com///commit/f01f5457ac3e61478a4ecdfb2d39fc3913f601b4))
 - add a new function of model loader via api and rename the other model loader ([9be1067](https://github.com///commit/9be1067d5d86fcdb1a93fc1efdbe53f617d88984))
@@ -53,7 +55,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([4f9caec](https://github.com///commit/4f9caec6c26d1259384a29e24158b46df2534fcf))
+- update CHANGELOG-GitHub.md ([c9bd9f3](https://github.com///commit/c9bd9f3282d288fe090bdda3888ee1bcd2eb787a))
 - in order to use Milvus to manage vector, add the milvus-sdk-python dependency to the project. ([42314d1](https://github.com///commit/42314d12cad02b8221263855db0326400cef232f))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com///commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com///commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
@@ -77,6 +79,7 @@
 
 ### Dependencies
 
+- add the new dependency of pylilvus[model] ([f766392](https://github.com///commit/f766392b9ab833bfef34a23efeb217daef06cc32))
 - in order to use Milvus to manage vector, add the milvus-sdk-python dependency to the project. ([f6bf28a](https://github.com///commit/f6bf28aa3ebd605aad054c9b35161cd9686ca3b2))
 - add the new package of streamlit-chat for the chatbot ([296b3d8](https://github.com///commit/296b3d8c5d297f6e4cf17737a791d423cc6b3ad7))
 - add the transformers package ([9409b0b](https://github.com///commit/9409b0b79d94900353b1255da262805c02b7bfb7))
