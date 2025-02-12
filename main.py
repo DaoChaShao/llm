@@ -1,4 +1,4 @@
-from utilities import subpages_setter
+from utilities.layout import subpages_setter
 
 
 def main():
