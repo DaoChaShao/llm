@@ -1,6 +1,6 @@
 from streamlit import title, divider, expander, caption, empty, sidebar, spinner
 
-from utilities import sidebar_params_download, model_downloader_scope
+from utilities.llm import sidebar_params_download, model_downloader_scope
 
 title("Model Download")
 divider()
