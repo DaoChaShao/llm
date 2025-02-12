@@ -55,7 +55,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([c9bd9f3](https://github.com///commit/c9bd9f3282d288fe090bdda3888ee1bcd2eb787a))
+- update CHANGELOG-GitHub.md ([f1088fb](https://github.com///commit/f1088fbabcb0228bfb51f8a63d8a46f5ebceba0d))
 - in order to use Milvus to manage vector, add the milvus-sdk-python dependency to the project. ([42314d1](https://github.com///commit/42314d12cad02b8221263855db0326400cef232f))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com///commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com///commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
