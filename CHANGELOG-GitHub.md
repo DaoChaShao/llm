@@ -52,7 +52,7 @@
 
 ### Docs
 
-- update CHANGELOG-GitHub.md ([66efdfd](https://github.com/DaoChaShao/llm-combination/commit/66efdfd17371b66b2496423cb12964d56fba0cf0))
+- update CHANGELOG-GitHub.md ([07eb841](https://github.com/DaoChaShao/llm-combination/commit/07eb84171b25d99dcac29b281a5d3c015a208142))
 - add the instructions for using the model loader of the ModelScope ([969096b](https://github.com/DaoChaShao/llm-combination/commit/969096b9518bc5b80a9a63a97206b91855f1ad4c))
 - add the instructions that create and remove the model in or out of the ollama via IDE editor. ([e77b8b2](https://github.com/DaoChaShao/llm-combination/commit/e77b8b251b62d5a41c1eccab1cfb5a95f3542598))
 - update CHANGELOG-GitHub.md ([b1f77c4](https://github.com/DaoChaShao/llm-combination/commit/b1f77c4442bd93381324e35dcc48ad25ff372e19))
