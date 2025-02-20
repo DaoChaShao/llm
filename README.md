@@ -13,8 +13,7 @@
 
 **Resources**
 ---
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)  
-![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white&link=https%3A%2F%2Fllm-com.streamlit.app%2F)  
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)   
 [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://llm-com.streamlit.app/)  
 Deploy, manage and share your apps for free using our [Community Cloud](https://streamlit.io/cloud)!
 
