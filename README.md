@@ -11,7 +11,7 @@
 1. Milvus is used to conduct vectors, such as save, query search, and other operations.
 2. If you want to use Milvus, you should install it first with the command `pip install pymilvus`.
 
-**R**
+**Resources**
 ---
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)
 
