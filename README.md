@@ -10,4 +10,6 @@
 **The instructions for using the Milvus**  
 1. Milvus is used for conducting vector, such as save, query and search and other operations.
 2. If you want to use Milvus, you should install it first with command `pip install pymilvus`.
-3. 
+
+**License**  
+[BSD 3-Clause](LICENSE)
