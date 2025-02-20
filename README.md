@@ -13,7 +13,7 @@
 
 **R**
 ---
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_color.svg)](https://llm-com.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)
 
 
 **License**
