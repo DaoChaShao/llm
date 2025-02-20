@@ -13,8 +13,8 @@
 
 **Resources**
 ---
+Deploy, manage and share your apps for free using our [Community Cloud](https://streamlit.io/cloud)! 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)
-
 
 **License**
 ---
