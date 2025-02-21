@@ -15,7 +15,7 @@
 ---
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-com.streamlit.app/)   
 [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://llm-com.streamlit.app/)  
-Deploy, manage and share your apps for free using our [Community Cloud](https://streamlit.io/cloud)!
+Deploy, manage and share this app via the following [Community Cloud](https://streamlit.io/cloud)!
 
 **License**
 ---
