@@ -67,6 +67,7 @@
 
 ### Docs
 
+- update CHANGELOG-GitHub.md for version 0.1.0 release ([1aec3ce](https://github.com///commit/1aec3ce5a170fdb334ce3764678535fa4e7ecaeb))
 - update .gitignore to include .idea directory ([deff0a8](https://github.com///commit/deff0a8059131f9975a432823f628ebd8dba5ce7))
 - update CHANGELOG-GitHub.md ([9f65790](https://github.com///commit/9f65790a7d6c4addb4b82b4ad037fdbb59125a7a))
 - in order to use Milvus to manage vector, add the milvus-sdk-python dependency to the project. ([42314d1](https://github.com///commit/42314d12cad02b8221263855db0326400cef232f))
