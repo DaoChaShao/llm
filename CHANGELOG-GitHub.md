@@ -33,6 +33,7 @@
 
 ### Bug Fixes
 
+- update changelog sections to include 'refactor' ([6639005](https://github.com/DaoChaShao/llm-combination/commit/66390057b8adaa8671362f4396bc5d4506ec21b6))
 - remove unused dependencies from requirements.txt ([e520eb1](https://github.com/DaoChaShao/llm-combination/commit/e520eb1d2d74b095b909693c11dfd5dce16292ee))
 - rename red_note.py for improved organization ([c25b067](https://github.com/DaoChaShao/llm-combination/commit/c25b0672ac472c228f512c917d1ac9c24dabdfc6))
 - update README with new application instructions and remove outdated content ([1a8f0c2](https://github.com/DaoChaShao/llm-combination/commit/1a8f0c244630bee0669133d9d01f38ca337ab90d))
