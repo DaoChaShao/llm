@@ -1,3 +1,0 @@
-FROM ./models/qwen2.5-7b-instruct-q2_k.gguf
-
-SYSTEM "You are a helpful assistant, when responding to your questions, you try your best to keep short and the point."
