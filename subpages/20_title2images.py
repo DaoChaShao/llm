@@ -1,6 +1,6 @@
 from streamlit import title, divider, text_input, empty
 
-from utilities.red_note import text2images_setter
+from utilis.red_note import text2images_setter
 
 title("Title to Images")
 divider()
